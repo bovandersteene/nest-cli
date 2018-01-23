@@ -1,13 +1,14 @@
 language: node_js
 node_js:
-  - "8"
-
+  - '8'
 jobs:
   include:
     - stage: test
-      script: npm test -s
+      script:
+        - npm test -s
     - stage: build
-      script: npm run -s build
+      script:
+        - npm run -s build
       deploy:
         skip_cleanup: true
         provider: npm
